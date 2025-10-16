@@ -1,0 +1,336 @@
+/* Estilos para GitHub Pages - Galería QR Universidad */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 3px solid #667eea;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 1.1em;
+}
+
+/* Navegación */
+nav {
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #34495e;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+}
+
+/* Botones */
+.btn, .btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 1.1em;
+}
+
+.btn-secondary {
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: 2px solid #bdc3c7;
+}
+
+.btn-secondary:hover {
+    background: #d5dbdb;
+    transform: translateY(-2px);
+}
+
+/* Grid de imágenes (página principal) */
+.imagenes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.imagen-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.imagen-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.imagen-preview {
+    height: 220px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.imagen-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imagen-card:hover .imagen-preview img {
+    transform: scale(1.08);
+}
+
+.imagen-info {
+    padding: 25px;
+}
+
+.imagen-info h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.imagen-info p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Página individual de imagen */
+.imagen-individual {
+    background: white;
+}
+
+.imagen-display-simple {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.imagen-header {
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.imagen-header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.imagen-header p {
+    color: #7f8c8d;
+    font-size: 1.2em;
+}
+
+.imagen-container-full {
+    background: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+.imagen-principal-full {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.imagen-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 3px solid #ecf0f1;
+    margin-top: 40px;
+    background: #f8f9fa;
+}
+
+footer p {
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .imagenes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .imagen-preview {
+        height: 200px;
+    }
+    
+    .imagen-info {
+        padding: 20px;
+    }
+    
+    .imagen-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .imagen-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 15px 0;
+    }
+    
+    header h1 {
+        font-size: 1.6em;
+    }
+    
+    .imagen-info {
+        padding: 15px;
+    }
+    
+    .imagen-info h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* Optimización para carga rápida */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Efecto de carga suave */
+.imagen-card, .imagen-container-full {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.imagen-card:nth-child(1) { animation-delay: 0.1s; }
+.imagen-card:nth-child(2) { animation-delay: 0.2s; }
+.imagen-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mejorar contraste para accesibilidad */
+.btn:focus, .btn-secondary:focus, .btn-back:focus {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Indicador de carga para imágenes */
+img {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+img:loaded {
+    animation: none;
+    background: none;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
